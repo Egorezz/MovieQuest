@@ -3,7 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:movie_quest/core/theme/colors/colors.dart';
 import 'package:movie_quest/core/theme/icons/icons.dart';
 import 'registration_container.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:movie_quest/router/app_router.dart';
 
+@RoutePage()
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
 
@@ -32,8 +35,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   width: 20,
                   child: SvgPicture.asset(AppIcons.backArrow),
                 ),
-                color: AppColors.textSecond,
-                onPressed: () => print('To Login Screen'),
+                onPressed: () => context.pushRoute(const LoginRoute()),
               ),
               centerTitle: true,
               title: Text(

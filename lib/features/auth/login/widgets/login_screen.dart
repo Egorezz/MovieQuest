@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:movie_quest/core/theme/colors/colors.dart';
 import 'login_container.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:movie_quest/router/app_router.dart';
 
+@RoutePage()
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -47,8 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(width: 5),
                         GestureDetector(
                           onTap: () {
-                            //TODO: make route to main_screen with authoirization
-                            print('Nav to main screen');
+                            context.pushRoute(const RegistrationRoute());
                           },
                           child: Text(
                             'Sign Up',

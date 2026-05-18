@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_quest/core/theme/colors/colors.dart';
 import 'package:movie_quest/core/theme/icons/icons.dart';
 import 'package:movie_quest/core/widgets/widgets.dart';
+import 'package:movie_quest/router/app_router.dart';
 
 class RegistrationContainer extends StatefulWidget {
   const RegistrationContainer({super.key});
@@ -105,7 +107,7 @@ class _RegistrationContainerState extends State<RegistrationContainer> {
               const SizedBox(width: 5),
               GestureDetector(
                 onTap: () {
-                  print('Sign In');
+                  context.pushRoute(const LoginRoute());
                 },
                 child: Text(
                   'Sign In',
